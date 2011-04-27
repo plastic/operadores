@@ -1,0 +1,39 @@
+h1. CakePHP Operadores Plugin
+
+http://github.com/plastic/operadores
+
+h2. Definition:
+
+* The plugin allows to admin auth
+
+
+h3. Installation:
+
+* Copy the files in this directory into <yourapp>/plugins/oeradores.
+* Run the following command in the cake console to create the tables:
+  
+  on Cakephp 1.3
+		@cake schema create -path app/plugins/operadores/config/schema -name operadores@
+
+h4. Configuration:
+
+* The plugin allows some simple runtime configuration. 
+
+in app_controller.php
+
+@public $components = array('Auth');@
+@function beforeFilter() {@
+@	$this->Auth->userModel = 'Operadores.Operador';@
+@	$this->Auth->fields = array('username' => 'email', 'password' => 'senha');@
+@	$this->Auth->loginAction = array('plugin' => 'operadores', 'controller' => 'operadores', 'action' => 'login', 'admin' => true);@
+@	$this->Auth->loginRedirect = array('plugin' => 'dashboard','controller' => 'dashboard', 'action' => 'index', 'admin' => true);@
+@	$this->Auth->logoutRedirect = array('plugin' => 'operadores','controller' => 'operadores', 'action' => 'login', 'admin' => true);@
+@	$this->Auth->autoRedirect = true;@
+@}@
+
+h5. Usage:
+
+For create the first operator, run the following using the cakephp shell:
+
+  @cake operador@
+     -> Create operator
