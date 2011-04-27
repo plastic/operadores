@@ -49,6 +49,7 @@ in app_controller.php
 		$this->Auth->autoRedirect = true;
 	}
 </code></pre>
+
 h5. Usage:
 
 For create the first operator, run the following using the cakephp shell:
