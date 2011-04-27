@@ -21,15 +21,15 @@ h4. Configuration:
 
 in app_controller.php
 
-@public $components = array('Auth');@
-@function beforeFilter() {@
-@	$this->Auth->userModel = 'Operadores.Operador';@
-@	$this->Auth->fields = array('username' => 'email', 'password' => 'senha');@
-@	$this->Auth->loginAction = array('plugin' => 'operadores', 'controller' => 'operadores', 'action' => 'login', 'admin' => true);@
-@	$this->Auth->loginRedirect = array('plugin' => 'dashboard','controller' => 'dashboard', 'action' => 'index', 'admin' => true);@
-@	$this->Auth->logoutRedirect = array('plugin' => 'operadores','controller' => 'operadores', 'action' => 'login', 'admin' => true);@
-@	$this->Auth->autoRedirect = true;@
-@}@
+@ public $components = array('Auth'); @
+@ function beforeFilter() { @
+@ 	$this->Auth->userModel = 'Operadores.Operador'; @
+@ 	$this->Auth->fields = array('username' => 'email', 'password' => 'senha'); @
+@ 	$this->Auth->loginAction = array('plugin' => 'operadores', 'controller' => 'operadores', 'action' => 'login', 'admin' => true); @
+@ 	$this->Auth->loginRedirect = array('plugin' => 'dashboard','controller' => 'dashboard', 'action' => 'index', 'admin' => true); @
+@ 	$this->Auth->logoutRedirect = array('plugin' => 'operadores','controller' => 'operadores', 'action' => 'login', 'admin' => true); @
+@ 	$this->Auth->autoRedirect = true; @
+@ } @
 
 h5. Usage:
 
