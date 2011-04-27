@@ -20,17 +20,17 @@ h4. Configuration:
 * The plugin allows some simple runtime configuration. 
 
 in app_controller.php
-
-	@public $components = array('Auth');@
-	@function beforeFilter() {@
-		@$this->Auth->userModel = 'Operadores.Operador';@
-		@$this->Auth->fields = array('username' => 'email', 'password' => 'senha');@
-		@$this->Auth->loginAction = array('plugin' => 'operadores', 'controller' => 'operadores', 'action' => 'login', 'admin' => true);@
-		@$this->Auth->loginRedirect = array('plugin' => 'dashboard','controller' => 'dashboard', 'action' => 'index', 'admin' => true);@
-		@$this->Auth->logoutRedirect = array('plugin' => 'operadores','controller' => 'operadores', 'action' => 'login', 'admin' => true);@
-		@$this->Auth->autoRedirect = true;@
-	@}@
-
+<pre><code>
+	public $components = array('Auth');
+	function beforeFilter() {
+		$this->Auth->userModel = 'Operadores.Operador';
+		$this->Auth->fields = array('username' => 'email', 'password' => 'senha');
+		$this->Auth->loginAction = array('plugin' => 'operadores', 'controller' => 'operadores', 'action' => 'login', 'admin' => true);
+		$this->Auth->loginRedirect = array('plugin' => 'dashboard','controller' => 'dashboard', 'action' => 'index', 'admin' => true);
+		$this->Auth->logoutRedirect = array('plugin' => 'operadores','controller' => 'operadores', 'action' => 'login', 'admin' => true);
+		$this->Auth->autoRedirect = true;
+	}
+</code></pre>
 h5. Usage:
 
 For create the first operator, run the following using the cakephp shell:
