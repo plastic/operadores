@@ -9,7 +9,7 @@ h2. Definition:
 
 h3. Installation:
 
-* Copy the files in this directory into <yourapp>/plugins/oeradores.
+* Copy the files in this directory into <yourapp>/plugins/operadores.
 * Run the following command in the cake console to create the tables:
   
   on Cakephp 1.3
