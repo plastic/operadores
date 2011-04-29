@@ -56,3 +56,5 @@ For create the first operator, run the following using the cakephp shell:
 
   @cake operador@
      -> Create operator
+in routes.php
+  @require ROOT . DS . 'app' . DS . 'plugins' . DS . 'operadores' . DS . 'config' . DS . 'routes.php';@
