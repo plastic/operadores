@@ -32,7 +32,7 @@ class OperadoresController extends OperadoresAppController {
 	{
 		$this->Operador->id = $id;
 		
-		if (!$this->exists()) {
+		if (!$this->Operador->exists()) {
 			return;
 		}
 		
