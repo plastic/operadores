@@ -46,11 +46,10 @@ class OperadorShell extends Shell
 		$dados = array(
 			'nome' => $username,
 			'email' => $email,
-			'senha' => $this->Auth->password($pwd1),
-			'loja_id' => 0
+			'senha' => $this->Auth->password($pwd1)
 		);
 		
-		if ( $this->Operador->save($dados) ) 
+		if ( $this->Operador->save($dados, false) ) 
 			$this->out('Operador adicionado com sucesso!!!');
 		else
 			$this->out('Operador invalido!!!');
